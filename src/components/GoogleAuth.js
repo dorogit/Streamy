@@ -1,11 +1,14 @@
 import React from 'react';
+import jwtDecode from 'jwt-decode';
 
 class GoogleAuth extends React.Component {
   state = { isSignedIn: null };
 
   componentDidMount() {
     function HandleToken(response) {
-    console.log(response)
+    const decoded = jwtDecode(response.credential)
+    console.log(decoded)
+    console.log(`This is your ID: ${decoded.sub}`)
     }
     window.onload = function () {
       google.accounts.id.initialize({
