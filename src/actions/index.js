@@ -1,8 +1,8 @@
 import { SIGN_IN } from "./types"
 
-export const SignIn = (decodedToken) => {
+export const SignIn = (response) => {
   return {
       type: SIGN_IN,
-      payload: decodedToken
+      payload: response
     }
 }

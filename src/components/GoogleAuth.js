@@ -1,19 +1,14 @@
 import React from 'react';
-import jwtDecode from 'jwt-decode';
 import { SignIn } from '../actions';
 import { connect } from 'react-redux';
 class GoogleAuth extends React.Component {
+  
   componentDidMount() {
-    function HandleToken(response) {
-    const decoded = jwtDecode(response.credential)
-    console.log(`This is your ID: ${decoded.sub}`)
-    this.props.SignIn(decoded)
-    this.userId = decoded.sub
-    }
+    let self = this
     window.onload = function () {
       google.accounts.id.initialize({
         client_id: '218020527928-33r48v1f5gdup9kg7mbtdsagnjh6j3ki.apps.googleusercontent.com',
-        callback:HandleToken.bind(this),
+        callback: (response) => {self.props.SignIn(response)},
         login_uri:"http://localhost:3000",
       });
       google.accounts.id.renderButton(
@@ -21,14 +16,16 @@ class GoogleAuth extends React.Component {
         { theme: "outline", size: "large" },
       );
     }
+    console.log(this)
   }
-
   render() {
-    return <div id ="SignIn"></div>;
+    return (
+    <div id ="SignIn">state is : {this.props.ID}</div>
+    );
   }
 }
 
 const mapStateToProps = (state) => {
-  return { userId: state.reducers.userId }
+  return { ID : state.userState.userId }
 }
 export default connect(mapStateToProps, {SignIn})(GoogleAuth);
