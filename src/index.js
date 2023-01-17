@@ -7,7 +7,7 @@ import reducers from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const store = configureStore({reducer: reducers, composeEnhancers: applyMiddleware() })
+const store = configureStore({reducer: reducers})
 ReactDOM.render(
   <Provider store = {store}>
     <App/>
