@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form'
 
 class StreamCreate extends React.Component {
-  renderInput(formProps) {
+  renderInput({ input,label }) { //forcibly taking props from redux-form by assigning props to our field helper function, forms is doing this magic automatically and providing stuff according to my needs!! :
     return(
-      <input {...formProps.input} />
+      <div className='field'>
+        <label>{label}</label>
+        <input {...input} />
+      </div>
+      
     )
   }
 
   render() {
     return(
-      <form>
-        <Field name="Title" component={this.renderInput}/>
-        <Field name="Description" component={this.renderInput}/>
+      <form className='ui form'>
+        <Field name="Title" component={this.renderInput} label='Enter a title for your stream'/> 
+        <Field name="Description" component={this.renderInput} label='Enter something nice to describe your stream!'/>
       </form>
     )
   }
