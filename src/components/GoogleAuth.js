@@ -20,7 +20,7 @@ class GoogleAuth extends React.Component {
   }
   render() {
     return (
-    <div id ="SignIn">state is : {this.props.ID}</div>
+    <div id ="SignIn"></div>
     );
   }
 }
