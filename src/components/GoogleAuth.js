@@ -16,7 +16,6 @@ class GoogleAuth extends React.Component {
         { theme: "outline", size: "large" },
       );
     }
-    console.log(this)
   }
   render() {
     return (
