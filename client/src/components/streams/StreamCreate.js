@@ -40,7 +40,6 @@ class StreamCreate extends React.Component {
     )
   }
 };
-
 const validate = (formValues) => {
   const error ={};
   if (!formValues.title) {
