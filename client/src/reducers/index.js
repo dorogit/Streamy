@@ -4,7 +4,7 @@ import { reducer as formReducer } from "redux-form";
 import streamReducer from "./streamReducer";
 
 export default combineReducers({
-  userId: idReducer,
+  currentUser: idReducer,
   form: formReducer,
   streams:streamReducer
 })

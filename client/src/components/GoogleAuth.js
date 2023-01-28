@@ -25,6 +25,6 @@ class GoogleAuth extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { ID : state.userId.userId }
+  return { ID : state.currentUser.userId }
 }
 export default connect(mapStateToProps, {SignIn})(GoogleAuth);
