@@ -1,3 +1,52 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "title 1",
+      "description": "ayo wtf",
+      "userId": "102911258653909285138",
+      "id": 1
+    },
+    {
+      "title": "title 1",
+      "description": "ayo wtf",
+      "userId": "102911258653909285138",
+      "id": 2
+    },
+    {
+      "title": "title 2",
+      "description": "this is a dessc",
+      "userId": "102911258653909285138",
+      "id": 3
+    },
+    {
+      "title": "HELP",
+      "description": "bababoey",
+      "userId": "102911258653909285138",
+      "id": 4
+    },
+    {
+      "title": "NIGGER",
+      "description": "MY PENIS HUGE",
+      "userId": "102911258653909285138",
+      "id": 5
+    },
+    {
+      "title": "CREATED BY ANOTHER ACCOUNT XD",
+      "description": "guacamole nigga penis",
+      "userId": "102559127900866464944",
+      "id": 6
+    },
+    {
+      "title": "yippie!",
+      "description": "yae",
+      "userId": "102559127900866464944",
+      "id": 7
+    },
+    {
+      "title": "hello",
+      "description": "Testing something",
+      "userId": "102911258653909285138",
+      "id": 8
+    }
+  ]
 }

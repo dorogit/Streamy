@@ -7,4 +7,4 @@ export default combineReducers({
   currentUser: idReducer,
   form: formReducer,
   streams:streamReducer
-})
+}) //
