@@ -5,7 +5,7 @@ import StreamForm from './StreamForm';
 import _ from 'lodash'
 class StreamEdit extends React.Component {
   componentDidMount() {
-    this.props.fetchStream(this.props.fetchStream(this.props.stream.id))
+    this.props.fetchStream(this.props.stream.id)
   }
 
   onSubmit = (formValues) => {
